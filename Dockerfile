@@ -8,4 +8,5 @@ RUN cd /src && go mod vendor && go build -o goapp
 FROM alpine
 WORKDIR /app
 COPY --from=build-env /src/goapp /app/
+EXPOSE 8080
 ENTRYPOINT ./goapp

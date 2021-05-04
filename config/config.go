@@ -6,7 +6,7 @@ import (
 	"github.com/kelseyhightower/envconfig"
 )
 
-var AppConfig *Config
+var AppConfig Config
 
 func InitialiseConfig() error {
 	err := envconfig.Process("server", &AppConfig)
